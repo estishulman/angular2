@@ -1,0 +1,20 @@
+<form [formGroup]="editLessonForm" (ngSubmit)="updateLesson()">
+    <mat-card appearance="outlined">
+      <mat-card-content>
+        <h2>Edit Lesson</h2>
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Content</mat-label>
+          <textarea matInput formControlName="content" required></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Course ID</mat-label>
+          <input matInput formControlName="courseId" required>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Update Lesson</button>
+      </mat-card-content>
+    </mat-card>
+  </form>

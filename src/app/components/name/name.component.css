@@ -1,0 +1,12 @@
+.logo {
+    position: fixed; /* מקרב את התוכן לתחתית */
+    bottom: 20px; /* מרחק מהקצה התחתון */
+    left: 50%; /* ממקם את האלמנט במרכז האופקי */
+    transform: translateX(-50%); /* מתקן את המיקום של האלמנט כדי שיהיה במרכז */
+    font-size: 2em; /* גודל גופן */
+    font-weight: bold; /* משקל גופן */
+    text-align: center; /* מרכז את הטקסט */
+    color: #333; /* צבע טקסט */
+    font-family: 'Arial', sans-serif; /* פונט */
+    /* תוספות נוספות לעיצוב כמו גבול, רקע וכו' */
+}  

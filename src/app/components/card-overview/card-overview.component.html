@@ -1,0 +1,34 @@
+@if (courses&&courses.length) { 
+<div class="card-container">
+    @for(course of courses; track course.id) {
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <h2>{{ course.title }}</h2>
+          <button (click)="navigateToCourseDetail(course.id)">Details</button>
+          <br>
+          <button (click)="enjoyExist(course.id)" mat-button>for enjoy or exist</button>
+           @if(isEnrolled(course.id)){
+             <span vix>✔️</span> 
+           }
+           @else {     
+            <span vix>❌</span>   
+           }                 
+           <ng-template #notEnrolled>   
+          </ng-template>       
+          @if(isTeacher){ 
+          <button class="my-button"(click)="editingCourse(course.id)" class="small-button">editing the Course</button>
+          <button class="my-button"(click)="DeleteCourse(course.id)" class="small-button">Delete a Course</button>
+          }   
+        </mat-card-content>       
+      </mat-card>    
+    }     
+  </div>    
+  @if(isTeacher){
+    <div class="teacher-actions">
+    <button class="my-button"(click)="AddCourse()" class="small-button">Add a Course</button>
+  </div> 
+ }} 
+@else { 
+  <p>loading</p> 
+} 
+  

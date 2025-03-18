@@ -1,0 +1,49 @@
+.course-detail {
+    max-width: 600px; /* גובה מקסימלי לקונטיינר */
+    margin: 20px auto; /* מרכז את הקונטיינר */
+    padding: 20px; /* ריפוד פנימי */
+    border: 1px solid #ccc; /* גבול לקונטיינר */
+    border-radius: 8px; /* פינות מעוגלות */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* צל לקונטיינר */
+    background-color: #f9f9f9; /* צבע רקע */
+}
+
+.course-detail h2 {
+    margin: 0 0 10px; /* רווחים סביב הכותרת */
+    color: #333; /* צבע כותרת */
+}
+
+.course-detail div {
+    margin-bottom: 15px; /* רווחים בין הפסקאות */
+    font-size: 16px; /* גודל טקסט */
+    line-height: 1.5; /* גובה קו עבור קריאות טובה יותר */
+    color: #555; /* צבע טקסט */
+}
+.teacher-actions {
+    margin-top: 20px; /* רווח מעל הכפתורים */
+    display: flex; /* השתמש ב-flexbox */
+    justify-content: center; /* מרכז את התוכן */
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex; /* השתמש ב-flexbox */
+    gap: 10px; /* רווח בין הכפתורים */
+}
+
+.lessons {
+    display: flex; /* הפוך ל-flexbox */
+    flex-direction: column; /* כל שיעור בשורה */
+    gap: 10px; /* רווח בין שיעורים */
+    margin-top: 10px; /* רווח מעל לרשימת השיעורים */
+}
+
+.less {
+    border: 1px solid #333; /* גבול עבור כל שיעור */
+    padding: 10px; /* ריפוד פנימי */
+    border-radius: 4px; /* פינות מעוגלות לשיעורים */
+    background-color: #fff; /* צבע רקע לשיעור */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* צל לשיעורים */
+
+
+}

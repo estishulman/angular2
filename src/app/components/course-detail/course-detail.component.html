@@ -1,0 +1,27 @@
+
+<div class="course-detail">
+    <div>Name: {{ detailes.title }}</div>
+    <div>Description: {{ detailes.description| truncate:50}}</div>
+    <div>Teacher ID: {{ detailes.teacherId }}</div>
+    <!-- <div>Is a memmber: {{ isMember }}</div> -->
+     <div class="lessons">
+        <h2>lessons:</h2>
+    @for(l of lessons; track l.id) {
+    <div class="less">
+     <h4>title:{{l.title}} ,content:{{l.content}} ,id:{{l.courseId}}</h4>
+     @if (isTeacher) {
+         <button (click)="DeleteLesson(l.id)" class="small-button">Delete a lesson</button>
+         <button (click)="editingLesson(l.id)" class="small-button">editing a lesson</button>
+        }
+    </div>
+    }
+</div>
+</div>
+@if (isTeacher) {
+    <div class="teacher-actions">
+        <button (click)="AddLesson()" class="small-button">Add a lesson</button>
+      </div>
+}
+ 
+
+

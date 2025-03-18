@@ -1,0 +1,64 @@
+
+
+
+
+
+
+section {
+    display: flex; /* משתמשים ב-Flexbox */
+    justify-content: flex-end; /* ימני את הכפתור */
+    text-align: right;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-button-row {
+    display: flex; /* משנה ל-flex כדי להפעיל יישור */
+    justify-content: flex-end; /* ממקם את הכפתור בצד ימין */
+    max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+    font-size: 18px; /* הגדלת גודל הכתב של הכפתור */
+    padding: 12px 24px; /* הגדלת שטח הכפתור */
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 140px;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center; /* מיישר את התמונה במרכז */
+    align-items: center; /* מיישר את התמונה vertically */
+}
+
+.home-image {
+    max-width: 100%; /* בטוח שהתמונה לא תצא מהקונטיינר שלה */
+    height: auto; /* שומר על יחס הגובה-רוחב */
+}
+.teacher-actions {
+    margin-top: 20px; /* רווח מעל הכפתורים */
+    display: flex; /* השתמש ב-flexbox */
+    justify-content: center; /* מרכז את התוכן */
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex; /* השתמש ב-flexbox */
+    gap: 10px; /* רווח בין הכפתורים */
+}

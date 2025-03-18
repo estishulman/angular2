@@ -1,0 +1,59 @@
+/* Styles for the card overview component */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;             /* Allow cards to wrap onto the next line */
+    justify-content: center;     /* Center the cards horizontally */
+    gap: 20px;                  /* Spacing between cards */
+    padding: 20px;              /* Padding around the container */
+}
+
+mat-card {
+    width: 300px;               /* Set a fixed width for each card */
+    transition: transform 0.2s; /* Add a transition effect */
+}
+
+mat-card:hover {
+    transform: scale(1.05);     /* Scale the card slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+mat-card-content {
+    text-align: center;         /* Center the text within the card */
+}
+
+/* Optional: Style for the button */
+button {
+    margin-top: 10px;          /* Margin to separate the button from text */
+    background-color: #6200ea; /* Primary color for the button */
+    color: white;              /* Text color for the button */
+    border: none;              /* Remove default border */
+    padding: 10px 15px;       /* Padding for the button */
+    cursor: pointer;           /* Change cursor to pointer */ 
+}
+button:hover {
+    background-color: #3700b3; /* Darker color on hover */
+}
+.icon-container {
+    position: absolute; /* מאפשר מיקום מוחלט */
+    top: 10px; /* מיקום מלמעלה */
+    right: 10px; /* מיקום מימין */
+    font-size: 20px; /* גודל האייקון */
+    z-index: 1; /* מבטיח שהאייקון יהיה מעל לתוכן אחר */
+}
+.teacher-actions {
+    margin-top: 20px; /* רווח מעל הכפתורים */
+    display: flex; /* השתמש ב-flexbox */
+    justify-content: center; /* מרכז את התוכן */
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex; /* השתמש ב-flexbox */
+    gap: 10px; /* רווח בין הכפתורים */
+}
+.my-button {
+    margin-right: 10px; /* מוסיף רווח של 10 פיקסלים בין הכפתורים */
+}
+
+
