@@ -1,6 +1,6 @@
 
 
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { CoursesService } from '../../services/courses.service';
 import { Router } from '@angular/router';
@@ -26,7 +26,7 @@ export class CardOverviewComponent implements OnInit {
   myCourses: any[] = [];
   isExist: boolean = false;
  isTeacher:boolean=false;
-  constructor(private router: Router, private coursesService: CoursesService,private usersService:UsersService) {
+  constructor(private router: Router, private coursesService: CoursesService,private usersService:UsersService,private cdr: ChangeDetectorRef) {
     console.log('ctor courses');
   }
 
@@ -38,6 +38,7 @@ export class CardOverviewComponent implements OnInit {
   }
 
   getMyCourses() {
+    
     this.studentId = Number(localStorage.getItem('userId')); // המרת ה-ID למספר
     console.log('studentId', this.studentId);
     
@@ -54,9 +55,9 @@ export class CardOverviewComponent implements OnInit {
 
   loadCourses() {
     console.log('Loading courses...');
-
     this.coursesService.getCourses().subscribe({
       next: (response: Course[]) => {
+        this.cdr.markForCheck();
         //this.lessons = response; // זה חכם יותר לאחסן את התגובה במשתנה אחר
         this.courses=response
         console.log('getCourses ok', this.courses);
