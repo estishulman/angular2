@@ -1,28 +1,12 @@
-// import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-create-lesson',
-//   imports: [],
-//   templateUrl: './create-lesson.component.html',
-//   styleUrl: './create-lesson.component.css'
-// })
-// export class CreateLessonComponent {
 
-// }
-
-import { ChangeDetectionStrategy, Component,OnInit } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-//import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CoursesService } from '../../services/courses.service';
-
-//import { Component, OnInit } from '@angular/core';
-//import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-//import { CoursesService } from '../../services/courses.service';
 import { LeesonService } from '../../services/leeson.service';
 
 @Component({
@@ -43,14 +27,6 @@ export class CreateLessonComponent implements OnInit {
     });
   }
 
-  // ngOnInit(): void {
-  //   this.courseId = this.route.snapshot.paramMap.get('courseId')!;
-  //   if (this.courseId) {
-  //     this.createLessonForm.patchValue({ courseId: this.courseId });
-  //   } else {
-  //     console.error('Course ID is missing');
-  //   }
-  // }  
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.courseId = params.get('courseId')!; // קבל את ה-courseId מה-URL

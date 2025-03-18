@@ -1,49 +1,15 @@
-// import { Component } from '@angular/core';
-// import { Router } from '@angular/router';
-// import { CoursesService } from '../../services/courses.service';
-
-// @Component({
-//   selector: 'app-course-detail',
-//   imports: [],
-//   templateUrl: './course-detail.component.html',
-//   styleUrl: './course-detail.component.css'
-// })
-// export class CourseDetailComponent {
-//   courseId:any
-// constructor(private router: Router,private coursesService: CoursesService) {}
-
-//   ngOnInit() {
-//     // this.on(); // Fetch courses on initialization
-//   }
-
-//   on() {
-//     this.coursesService.getCoursesById(this.courseId).subscribe({
-//       next: (response: any) => {
-//         this.courseId = response; // Store the response in courses array
-//         console.log('getCourses ok', this.courseId);
-
-//       },
-//       error: (error: any) => {
-//         console.error('Error fetching courses', error);
-//       }
-//     });
-//   }
-// }
-
-
 
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CoursesService } from '../../services/courses.service';
 import { UsersService } from '../../services/users.service';
 import { LeesonService } from '../../services/leeson.service';
-import { HighlightDirective } from '../../models/highlight.directive'
 import { TruncatePipe } from '../../models/truncate.pipe'
 @Component({
   selector: 'app-course-detail',
   templateUrl: './course-detail.component.html',
   styleUrls: ['./course-detail.component.css'], // יש לתקן לstyleUrls
-  imports:[HighlightDirective,TruncatePipe]
+  imports:[TruncatePipe]
 })
 export class CourseDetailComponent implements OnInit {
   detailes: any; // או מספר/סוג שמתאים לקורס

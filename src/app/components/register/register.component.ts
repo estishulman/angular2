@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {Component} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -24,30 +24,6 @@ export class RegisterComponent {
     });
   }
   user = { name: '', email: '', password: '',role:'' }; // אובייקט משתמש
-  // onRegisterOk() {
-  //   // !!לרשום אותו להיות משתמש
-
-  //   // כאן תוכל להוסיף את הלוגיקה שלך לאימות המשתמש
-  //   // this.router.navigate(['/home']); // מעבר לעמוד הבית
-  //     this.router.navigate(['/home']);
-  // }
-
-
-  // onRegisterOk() {
-
-    
-  //   this.registerService.register(this.user).subscribe({
-
-  //     next: response => {
-  //       console.log("onRegisterOk111");
-  //       console.log('User registered', response);
-  //       this.router.navigate(['/home']);
-  //     },
-  //     error: error => {
-  //       console.error('Registration error', error);
-  //     }
-  //   });
-  // }
   
   onRegisterOk() {
     if (this.registerForm.valid) {

@@ -1,25 +1,9 @@
-// import { Component } from '@angular/core';
 
-// @Component({
-//   selector: 'app-edit-course',
-//   imports: [],
-//   templateUrl: './edit-course.component.html',
-//   styleUrl: './edit-course.component.css'
-// })
-// export class EditCourseComponent {
-
-// }
-
-import { ChangeDetectionStrategy, Component,OnInit} from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-//import { Router } from '@angular/router';
-//import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-//import { CoursesService } from '../../services/courses.service';
-
-//import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,ReactiveFormsModule,Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CoursesService } from '../../services/courses.service';

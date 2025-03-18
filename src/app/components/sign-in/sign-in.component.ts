@@ -29,8 +29,6 @@ export class SignInComponent {
 
   
   onSignInOk() {
-    
-    // this.router.navigate(['/home']); // מעבר לעמוד הבית
     if (this.signInForm.valid||true) {
       const user =this.signInForm.value
       this.signInService.signIn(user).subscribe({
@@ -43,9 +41,7 @@ export class SignInComponent {
         }
         
       });
-      // כאן תוכל להוסיף את הלוגיקה שלך לאימות המשתמש
     } else {
-      // הצג הודעת שגיאה או טיפול בשגיאות
       console.error('Form is invalid');
     }
   }
